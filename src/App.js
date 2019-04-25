@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, Link /*, Redirect */ } from 'react-router-dom';
+import { connect } from 'react-redux';
+import TestList from './components/TestList';
+import * as actions from './actions';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+    renderHeader() {
+        if (this.props.auth) {
+            return (
+                <div>
+                    <ul>
+                        <li><Link className="nav-list" to="/list">List</Link></li>
+                        <li><button className="sign-out" onClick={() => this.props.changeAuth(false)}>Sign Out</button></li>
+                    </ul>
+                    <Route path="/list" exact component={TestList} />
+                </div>
+            );
+        } else {
+            return (
+                <ul>
+                    <li><button className="sign-in" onClick={() => this.props.changeAuth(true)}>Sign In</button></li>
+                </ul>
+            );
+        }
+    };
+    render() {
+        return (<div>{this.renderHeader()} </div>);
+    }
+};
 
-export default App;
+function mapStateToProps(state) {
+    return { auth: state.auth }
+};
+
+export default connect(mapStateToProps, actions)(App);

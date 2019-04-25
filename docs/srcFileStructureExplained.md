@@ -1,0 +1,22 @@
+# File Structure for /src
+
+- 'scr/' source tree
+  - `__tests__` (for integration test)
+    - `App.test.js` (move the App test here)
+    - `integration.test.js`
+  - `actions` ( action types and return functions )
+    - `__tests__` (for action unit tests)
+      - `actions_index.test.js`
+    - `index.js`
+    - `types.js`
+  - `components` (visible layout component render functions )
+    - `__tests__` (for component unit tests)
+      - `TestList.test.js'
+    - `TestList.js` (simple component to display)
+  - reducers (redux technique for app state maintainance)
+    - `__tests__` (for reducers unit tests)
+      - `simpleAuthButton.test.js`
+    - `index.js`
+    - `simpleAuthButton.js` (user action testing)
+  - `Root.js` (so we can setup app for testing redux things)
+  - `setupTests.js` (name hack to pullin Enzyne Adaptor must be in this dir and have "xxxxTests.js" in name)

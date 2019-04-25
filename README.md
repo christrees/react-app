@@ -39,10 +39,10 @@ react application template
 
 <br />
 
-<p align="center">Placeholder for big Image below
-    <a href="https://github.com/christrees/react-app">
-        <img src="docs/assets/leaf-01.jpg" width="650" />
-    </a>
+<p align="center">
+    <img height="200px" src="docs/assets/v0.0.3-SignIn.png" />
+    <img height="200px" src="docs/assets/v0.0.3-SignOut.png" />
+    <img height="200px" src="docs/assets/v0.0.3-List.png" />
 </p>
 
 > 🌦 **Note:** Need to update the image above with current screenshot.
@@ -56,6 +56,7 @@ react application template
 * 😎🏝 **DONE!** Start hacking an isolated dashboard.
 
 <hr />
+
 ### Documentation
 
 Expanded [react-app Documentation](docs/README.md) in [docs/](docs/README.md).
