@@ -28,8 +28,8 @@ react application template
 </p>
 
 <p align="center">
-  <a href="http://demo.christrees.com/react-app">demo
-    <img height="55px" src="docs/assets/leaf-01.jpg" />
+  <a href="http://demo.christrees.com/react-app/">demo
+    <img height="55px" src="docs/assets/v0.0.3-List.png" />
   </a>
   <a href="https://github.com/christrees/react-app">
     <img height="55px" src="docs/assets/leaf-01.jpg" />
