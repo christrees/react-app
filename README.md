@@ -20,7 +20,12 @@ react application template
   <a href="https://github.com/christrees">
     <img src="https://img.shields.io/github/followers/christrees.svg?style=social&label=geek" />
   </a>
+  <a href="https://travis-ci.org/christrees/react-app">
+    <img src="https://travis-ci.org/christrees/react-app.svg?branch=master" />
+  </a>
 </p>
+
+
 
 <p align="center">
     Goal: React admin dashboard template for app testing 

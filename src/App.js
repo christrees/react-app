@@ -8,7 +8,7 @@ class App extends Component {
     renderHeader() {
         if (this.props.auth) {
             return (
-                <div>
+                <div>v0.0.4
                     <ul>
                         <li><Link className="nav-list" to="/list">List</Link></li>
                         <li><button className="sign-out" onClick={() => this.props.changeAuth(false)}>Sign Out</button></li>

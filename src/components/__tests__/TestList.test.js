@@ -5,8 +5,11 @@ import Root from '../../Root';
 
 let wrapped;
 beforeEach(() => {
+    const initialState = {
+        repos: ['christrees/repo1', 'christrees/repo2']
+    };
     wrapped = mount(
-        <Root>
+        <Root initialState={initialState}>
             <TestList />
         </Root>
     );
@@ -15,13 +18,12 @@ afterEach(() => {
     wrapped.unmount();
 });
 
-it ('creates one LI per server note', () => {
-    expect(wrapped.find('li').length).toEqual(1);
+it ('creates one LI per repo', () => {
+    expect(wrapped.find('ul').length).toEqual(1);
 });
 
-/*
-it ('each server note is dislayed in list', () => {
-    expect(wrapped.render().text()).toContain('Note 1');
-    expect(wrapped.render().text()).toContain('Note 2');
+
+it ('each repo is dislayed in list', () => {
+    expect(wrapped.render().text()).toContain('christrees/repo1');
+    expect(wrapped.render().text()).toContain('christrees/repo2');
 });
-*/
